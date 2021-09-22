@@ -68,7 +68,7 @@ const createStore = () => {
         }
     };
 
-    const defaultKeypadType = KeypadTypes.EXPRESSION;
+    const defaultKeypadType = KeypadTypes.CUSTOM_VT_MATH;
 
     const initialKeypadState = {
         extraKeys: ["x", "y", Keys.THETA, Keys.PI],

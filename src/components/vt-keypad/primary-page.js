@@ -15,7 +15,7 @@ class PrimaryPage extends React.Component {
                 style={{
                     backgroundColor: "#DBDCDD",
                     width: "100%",
-                    // height: 192,
+                    // height: 256,
 
                     display: "grid",
                     gridTemplateColumns: "repeat(5, 1fr)",

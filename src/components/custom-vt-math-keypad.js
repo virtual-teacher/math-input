@@ -55,6 +55,7 @@ class CustomVTMathKeypad extends React.Component {
             extraKeys,
             roundTopLeft,
             roundTopRight,
+            onKeypadSizeChange,
         } = this.props;
 
         let dismissOrJumpOutKey;
@@ -95,7 +96,10 @@ class CustomVTMathKeypad extends React.Component {
 
         return (
             <Keypad style={styles.keypad}>
-                <VTKeypadWrapper dismissOrJumpOutKey={dismissOrJumpOutKey} />
+                <VTKeypadWrapper
+                    dismissOrJumpOutKey={dismissOrJumpOutKey}
+                    onKeypadSizeChange={onKeypadSizeChange}
+                />
             </Keypad>
         );
     }

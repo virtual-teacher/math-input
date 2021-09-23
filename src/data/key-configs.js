@@ -356,10 +356,13 @@ for (const num of NUMBERS) {
 // Add in every variable.
 const LETTERS = [
     "A",
+    "Ą",
     "B",
     "C",
+    "Ć",
     "D",
     "E",
+    "Ę",
     "F",
     "G",
     "H",
@@ -369,11 +372,14 @@ const LETTERS = [
     "L",
     "M",
     "N",
+    "Ń",
     "O",
+    "Ó",
     "P",
     "Q",
     "R",
     "S",
+    "Ś",
     "T",
     "U",
     "V",
@@ -381,6 +387,8 @@ const LETTERS = [
     "X",
     "Y",
     "Z",
+    "Ź",
+    "Ż",
 ];
 for (const letter of LETTERS) {
     const lowerCaseVariable = letter.toLowerCase();

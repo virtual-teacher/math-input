@@ -15,7 +15,7 @@ class TertiaryPage extends React.Component {
                 style={{
                     backgroundColor: "#DBDCDD",
                     width: "100%",
-                    // height: 192,
+                    height: 256,
 
                     display: "grid",
                     gridTemplateColumns: "repeat(5, 1fr)",
@@ -47,7 +47,7 @@ class TertiaryPage extends React.Component {
                 <TouchableKeypadButton keyConfig={Keys.NOOP} />
                 <TouchableKeypadButton keyConfig={Keys.NOOP} />
                 <TouchableKeypadButton keyConfig={Keys.NOOP} />
-                <TouchableKeypadButton keyConfig={Keys.NOOP} />
+                <TouchableKeypadButton keyConfig={Keys.BACKSPACE} />
                 <TouchableKeypadButton keyConfig={dismissOrJumpOutKey} />
             </View>
         );

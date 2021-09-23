@@ -108,7 +108,6 @@ const mapStateToProps = (state, ownProps) => {
 
     const {keyConfig, ...rest} = ownProps;
 
-    console.log(keyConfig);
     const {id, childKeyIds, type} = keyConfig;
 
     const childKeys = childKeyIds && childKeyIds.map((id) => KeyConfigs[id]);

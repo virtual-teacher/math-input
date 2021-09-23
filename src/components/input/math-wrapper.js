@@ -81,10 +81,13 @@ const Numerals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const GreekLetters = ["\\theta", "\\pi"];
 const Letters = [
     "A",
+    "Ą",
     "B",
     "C",
+    "Ć",
     "D",
     "E",
+    "Ę",
     "F",
     "G",
     "H",
@@ -94,11 +97,14 @@ const Letters = [
     "L",
     "M",
     "N",
+    "Ń",
     "O",
+    "Ó",
     "P",
     "Q",
     "R",
     "S",
+    "Ś",
     "T",
     "U",
     "V",
@@ -106,6 +112,8 @@ const Letters = [
     "X",
     "Y",
     "Z",
+    "Ź",
+    "Ż",
 ];
 
 // We only consider numerals, variables, and Greek Letters to be proper

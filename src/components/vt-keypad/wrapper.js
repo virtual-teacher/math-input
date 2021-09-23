@@ -9,16 +9,28 @@ const Tabbar = require("../tabbar/tabbar");
 const PrimaryPage = require("./primary-page");
 const Secondary = require("./secondary-page");
 const Tertiary = require("./tertiary-page");
+const Alphabet = require("./alphabet-page");
 
 class VTKeypadWrapper extends React.Component {
     state = {
         selectedPage: "Numbers",
     };
+    componentDidUpdate() {
+        const {selectedPage} = this.state;
+        const {onKeypadSizeChange} = this.props;
+
+        if (selectedPage === "Alphabet") {
+            // rows, columns, maxVisibleRows, numPages
+            onKeypadSizeChange(4, undefined, 4, 3);
+        } else {
+            onKeypadSizeChange(4, 5, 4, 3);
+        }
+    }
     render() {
         const {selectedPage} = this.state;
         const {dismissOrJumpOutKey} = this.props;
 
-        const availablePages = ["Numbers", "Operators", "Geometry"];
+        const availablePages = ["Numbers", "Operators", "Geometry", "Alphabet"];
         return (
             <View>
                 <Tabbar
@@ -35,6 +47,9 @@ class VTKeypadWrapper extends React.Component {
                 )}
                 {selectedPage === "Geometry" && (
                     <Tertiary dismissOrJumpOutKey={dismissOrJumpOutKey} />
+                )}
+                {selectedPage === "Alphabet" && (
+                    <Alphabet dismissOrJumpOutKey={dismissOrJumpOutKey} />
                 )}
             </View>
         );

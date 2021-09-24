@@ -53,7 +53,7 @@ class PrimaryPage extends React.Component {
                     }}
                 >
                     {/* Row 2 */}
-                    <TouchableKeypadButton keyConfig={Keys.NOOP} />
+                    <TouchableKeypadButton keyConfig={Keys.NOOP} borders={[]} />
                     <ManyKeypadButton keys={["a", "A", "ą", "Ą"]} />
                     <ManyKeypadButton keys={["s", "S"]} />
                     <ManyKeypadButton keys={["d", "D"]} />
@@ -63,7 +63,7 @@ class PrimaryPage extends React.Component {
                     <ManyKeypadButton keys={["j", "J"]} />
                     <ManyKeypadButton keys={["k", "K"]} />
                     <ManyKeypadButton keys={["l", "L"]} />
-                    <TouchableKeypadButton keyConfig={Keys.NOOP} />
+                    <TouchableKeypadButton keyConfig={Keys.NOOP} borders={[]} />
                 </View>
                 <View
                     style={{
@@ -76,7 +76,7 @@ class PrimaryPage extends React.Component {
                     }}
                 >
                     {/* Row 3 */}
-                    <TouchableKeypadButton keyConfig={Keys.NOOP} />
+                    <TouchableKeypadButton keyConfig={Keys.NOOP} borders={[]} />
 
                     <ManyKeypadButton keys={["z", "Z", "ź", "Ź", "ż", "Ż"]} />
                     <ManyKeypadButton keys={["x", "X"]} />
@@ -85,7 +85,7 @@ class PrimaryPage extends React.Component {
                     <ManyKeypadButton keys={["b", "B"]} />
                     <ManyKeypadButton keys={["n", "N", "ń", "Ń"]} />
                     <ManyKeypadButton keys={["m", "M"]} />
-                    <TouchableKeypadButton keyConfig={Keys.NOOP} />
+                    <TouchableKeypadButton keyConfig={Keys.NOOP} borders={[]} />
                 </View>
                 <View
                     style={{
@@ -97,9 +97,9 @@ class PrimaryPage extends React.Component {
                         gridTemplateRows: "repeat(1, 1fr)",
                     }}
                 >
-                    <TouchableKeypadButton keyConfig={Keys.NOOP} />
-                    <TouchableKeypadButton keyConfig={Keys.NOOP} />
-                    <TouchableKeypadButton keyConfig={Keys.NOOP} />
+                    <TouchableKeypadButton keyConfig={Keys.NOOP} borders={[]} />
+                    <TouchableKeypadButton keyConfig={Keys.NOOP} borders={[]} />
+                    <TouchableKeypadButton keyConfig={Keys.NOOP} borders={[]} />
                     <TouchableKeypadButton keyConfig={Keys.BACKSPACE} />
                     <TouchableKeypadButton keyConfig={dismissOrJumpOutKey} />
                 </View>

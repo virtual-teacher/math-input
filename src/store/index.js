@@ -458,13 +458,6 @@ const createStore = () => {
                     numPages: keypadForType[keypadType].numPages,
                 };
 
-                console.log(
-                    "CONFIGURE KEYPAD",
-                    keypadType,
-                    gridDimensions,
-                    action,
-                );
-
                 return {
                     ...state,
                     ...layoutParametersForDimensions(

@@ -8,7 +8,7 @@ const TouchableKeypadButton = require("../touchable-keypad-button");
 const ManyKeypadButton = require("../many-keypad-button");
 const KeyboardWrapper = require("./keyboard-wrapper");
 const KeyboardRow = require("./keyboard-row");
-const { PlaceHolderButton } = require("../keypad/keypad-page-items");
+const { PlaceHolderButton, SecondaryKeypadButton } = require("../keypad/keypad-page-items");
 
 class SecondaryPage extends React.Component {
     render() {
@@ -16,15 +16,12 @@ class SecondaryPage extends React.Component {
         return (
             <KeyboardWrapper>
                 <KeyboardRow rows={6}>
-                    <TouchableKeypadButton keyConfig={Keys.DEGREE} />
-                    <TouchableKeypadButton keyConfig={Keys.PI} />
-                    <TouchableKeypadButton keyConfig={Keys.ABS} />
-                </KeyboardRow>
-
-                <KeyboardRow rows={6}>
                     <TouchableKeypadButton keyConfig={Keys.ALPHA} />
                     <TouchableKeypadButton keyConfig={Keys.BETA} />
                     <TouchableKeypadButton keyConfig={Keys.GAMMA} />
+                    <TouchableKeypadButton keyConfig={Keys.ABS} />
+                    <TouchableKeypadButton keyConfig={Keys.PI} />
+                    <TouchableKeypadButton keyConfig={Keys.DEGREE} />
                 </KeyboardRow>
 
                 <KeyboardRow rows={6}>
@@ -33,13 +30,22 @@ class SecondaryPage extends React.Component {
                     <TouchableKeypadButton keyConfig={Keys.TAN} />
                     <TouchableKeypadButton keyConfig={Keys.CTG} />
                     <div />
+                    <div />
+                </KeyboardRow>
+
+                <KeyboardRow rows={6}>
+                    <TouchableKeypadButton keyConfig={Keys.LOG} />
+                    <TouchableKeypadButton keyConfig={Keys.LOG_N} />
+                    <TouchableKeypadButton keyConfig={Keys.LN} />
+                    <div />
+                    <div />
                     <TouchableKeypadButton keyConfig={Keys.BACKSPACE} />
                 </KeyboardRow>
 
                 <KeyboardRow rows={6}>
-                    <TouchableKeypadButton keyConfig={Keys.LN} />
-                    <TouchableKeypadButton keyConfig={Keys.LOG} />
-                    <TouchableKeypadButton keyConfig={Keys.LOG_N} />
+                    <div />
+                    <div />
+                    <div />
                     <div />
                     <div />
                     <TouchableKeypadButton keyConfig={dismissOrJumpOutKey} />

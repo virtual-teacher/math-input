@@ -58,14 +58,15 @@ class DragListener {
     }
 
     attach() {
-        window.addEventListener("scroll", this._scrollListener);
+        // Disabled to avoid double focus on inputs when browser scroll page to focus selected input (in case when there are more than one math-input on page)
+        // window.addEventListener("scroll", this._scrollListener);
         window.addEventListener("touchmove", this._moveListener);
         window.addEventListener("touchend", this._endAndCancelListener);
         window.addEventListener("touchcancel", this._endAndCancelListener);
     }
 
     detach() {
-        window.removeEventListener("scroll", this._scrollListener);
+        // window.removeEventListener("scroll", this._scrollListener);
         window.removeEventListener("touchmove", this._moveListener);
         window.removeEventListener("touchend", this._endAndCancelListener);
         window.removeEventListener("touchcancel", this._endAndCancelListener);

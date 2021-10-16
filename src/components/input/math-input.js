@@ -1,9 +1,9 @@
 const React = require("react");
 const PropTypes = require("prop-types");
 const ReactDOM = require("react-dom");
-const {StyleSheet} = require("aphrodite");
+const { StyleSheet } = require("aphrodite");
 
-const {View} = require("../../fake-react-native-web");
+const { View } = require("../../fake-react-native-web");
 const CursorHandle = require("./cursor-handle");
 const MathWrapper = require("./math-wrapper");
 const scrollIntoView = require("./scroll-into-view");
@@ -14,11 +14,11 @@ const {
 } = require("../common-style");
 
 import Color from "@khanacademy/wonder-blocks-color";
-const {keypadElementPropType} = require("../prop-types");
-const {wonderBlocksBlue, offBlack} = require("../common-style");
+const { keypadElementPropType } = require("../prop-types");
+const { wonderBlocksBlue, offBlack } = require("../common-style");
 const Keys = require("../../data/keys");
 
-const i18n = window.i18n || {_: (s) => s};
+const i18n = window.i18n || { _: (s) => s };
 
 const constrainingFrictionFactor = 0.8;
 
@@ -109,7 +109,7 @@ class MathInput extends React.Component {
                 // the 'Check answer' bottom bar, in which case, we don't want
                 // to dismiss the keypad on check.
                 // TODO(charlie): Inject this logic.
-                if (!this._container.contains(evt.target)) {
+                if (!this.inputRef.contains(evt.target)) {
                     let touchDidStartInOrBelowKeypad = false;
                     if (
                         this.props.keypadElement &&
@@ -308,7 +308,7 @@ class MathInput extends React.Component {
     blur = () => {
         this.mathField.blur();
         this.props.onBlur && this.props.onBlur();
-        this.setState({focused: false, handle: {visible: false}});
+        this.setState({ focused: false, handle: { visible: false } });
     };
 
     focus = () => {
@@ -340,7 +340,7 @@ class MathInput extends React.Component {
 
         this.mathField.focus();
         this.props.onFocus && this.props.onFocus();
-        this.setState({focused: true}, () => {
+        this.setState({ focused: true }, () => {
             // NOTE(charlie): We use `setTimeout` to allow for a layout pass to
             // occur. Otherwise, the keypad is measured incorrectly. Ideally,
             // we'd use requestAnimationFrame here, but it's unsupported on
@@ -557,7 +557,7 @@ class MathInput extends React.Component {
     };
 
     handleTouchStart = (e) => {
-        e.stopPropagation();
+        // e.stopPropagation();
 
         // Hide the cursor handle on touch start, if the handle itself isn't
         // handling the touch event.
@@ -582,7 +582,7 @@ class MathInput extends React.Component {
     };
 
     handleTouchMove = (e) => {
-        e.stopPropagation();
+        // e.stopPropagation();
 
         // Update the handle-less cursor's location on move, if there's any
         // content in the box. Note that if the user touched outside the keypad
@@ -597,7 +597,7 @@ class MathInput extends React.Component {
     };
 
     handleTouchEnd = (e) => {
-        e.stopPropagation();
+        // e.stopPropagation();
 
         // And on touch-end, reveal the cursor, unless the input is empty. Note
         // that if the user touched outside the keypad (e.g., with a different
@@ -804,16 +804,16 @@ class MathInput extends React.Component {
     };
 
     render() {
-        const {focused, handle} = this.state;
-        const {style} = this.props;
+        const { focused, handle } = this.state;
+        const { style } = this.props;
 
         const innerStyle = {
             ...inlineStyles.innerContainer,
             borderWidth: this.getBorderWidthPx(),
             ...(focused
                 ? {
-                      borderColor: wonderBlocksBlue,
-                  }
+                    borderColor: wonderBlocksBlue,
+                }
                 : {}),
             ...style,
         };
@@ -836,7 +836,7 @@ class MathInput extends React.Component {
                 onTouchStart={this.handleTouchStart}
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}
-                onClick={(e) => e.stopPropagation()}
+                // onClick={(e) => e.stopPropagation()}
                 role={"textbox"}
                 ariaLabel={ariaLabel}
             >

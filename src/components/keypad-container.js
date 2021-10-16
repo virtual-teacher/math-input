@@ -1,18 +1,18 @@
 const React = require("react");
 const PropTypes = require("prop-types");
-const {connect} = require("react-redux");
-const {StyleSheet} = require("aphrodite");
+const { connect } = require("react-redux");
+const { StyleSheet } = require("aphrodite");
 
-const {View} = require("../fake-react-native-web");
+const { View } = require("../fake-react-native-web");
 const FractionKeypad = require("./fraction-keypad");
 const ExpressionKeypad = require("./expression-keypad");
 const CustomVTMathKeypad = require("./custom-vt-math-keypad");
 const NavigationPad = require("./navigation-pad");
 const zIndexes = require("./z-indexes");
-const {setPageSize, setGridSize} = require("../actions");
-const {keyIdPropType} = require("./prop-types");
-const {KeypadTypes, LayoutModes} = require("../consts");
-const {row, centered, fullWidth} = require("./styles");
+const { setPageSize, setGridSize } = require("../actions");
+const { keyIdPropType } = require("./prop-types");
+const { KeypadTypes, LayoutModes } = require("../consts");
+const { row, centered, fullWidth } = require("./styles");
 const {
     innerBorderColor,
     innerBorderStyle,
@@ -155,7 +155,7 @@ class KeypadContainer extends React.Component {
             onElementMounted,
             style,
         } = this.props;
-        const {hasBeenActivated} = this.state;
+        const { hasBeenActivated } = this.state;
 
         // NOTE(charlie): We render the transforms as pure inline styles to
         // avoid an Aphrodite bug in mobile Safari.
@@ -198,6 +198,7 @@ class KeypadContainer extends React.Component {
                             onElementMounted(element);
                         }
                     }}
+                    {...this.props}
                 >
                     {navigationPadEnabled && (
                         <NavigationPad

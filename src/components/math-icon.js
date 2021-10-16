@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     },
 
     base: {
-        fontSize: 25,
+        fontSize: 20,
     },
 });
 

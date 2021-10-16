@@ -72,6 +72,7 @@ const NormalCommands = {
     [Keys.SIN]: "sin",
     [Keys.COS]: "cos",
     [Keys.TAN]: "tan",
+    [Keys.CTG]: "ctg",
 };
 
 const ArithmeticOperators = ["+", "-", "\\cdot", "\\times", "\\div"];
@@ -229,7 +230,7 @@ class MathWrapper {
         } else if (key === Keys.RIGHT || key === Keys.JUMP_OUT) {
             this._handleRightArrow(cursor);
         } else if (
-            /^[a-zA-Z]|[ą,ć,ę,ń,ó,ś,ź,ż,Ą,Ć,Ę,Ń,Ó,Ś,Ź,Ż]$/.test(key) &&
+            /^[a-zA-Z]|[ą,ć,ę,ł,ń,ó,ś,ź,ż,Ą,Ć,Ę,Ł,Ń,Ó,Ś,Ź,Ż]$/.test(key) &&
             !/^NUM_\d/.test(key)
         ) {
             // polish characters only
@@ -598,7 +599,7 @@ class MathWrapper {
         // a command being prefixed with a backslash leads to undesired
         // behavior. For example, Greek symbols, left parentheses, and square
         // roots all get treated as commands.
-        const validCommands = ["\\log", "\\ln", "\\cos", "\\sin", "\\tan"];
+        const validCommands = ["\\log", "\\ln", "\\cos", "\\sin", "\\tan", "\\ctg"];
 
         let name = "";
         let startNode;

@@ -37,8 +37,8 @@ class PrimaryPage extends React.Component {
                     <TouchableKeypadButton keyConfig={KeyConfigs.NUM_1} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.NUM_2} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.NUM_3} />
-                    <ManyKeypadButton keys={[Keys.LEFT_PAREN, Keys.LT, Keys.LEQ]} />
-                    <ManyKeypadButton keys={[Keys.RIGHT_PAREN, Keys.GT, Keys.GEQ]} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.LEFT_PAREN} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.RIGHT_PAREN} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.BACKSPACE} />
                 </KeyboardRow>
 

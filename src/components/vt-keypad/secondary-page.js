@@ -2,7 +2,8 @@ const React = require("react");
 const {View} = require("@khanacademy/wonder-blocks-core");
 const Color = require("@khanacademy/wonder-blocks-color");
 
-const Keys = require("../../data/key-configs");
+const KeyConfigs = require("../../data/key-configs");
+const Keys = require("../../data/keys");
 
 const TouchableKeypadButton = require("../touchable-keypad-button");
 const ManyKeypadButton = require("../many-keypad-button");
@@ -16,35 +17,35 @@ class SecondaryPage extends React.Component {
         return (
             <KeyboardWrapper>
                 <KeyboardRow rows={6}>
-                    <TouchableKeypadButton keyConfig={Keys.ALPHA} />
-                    <TouchableKeypadButton keyConfig={Keys.BETA} />
-                    <TouchableKeypadButton keyConfig={Keys.GAMMA} />
-                    <TouchableKeypadButton keyConfig={Keys.ABS} />
-                    <TouchableKeypadButton keyConfig={Keys.PI} />
-                    <TouchableKeypadButton keyConfig={Keys.DEGREE} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.ALPHA} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.BETA} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.GAMMA} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.ABS} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.PI} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.DEGREE} />
                 </KeyboardRow>
 
                 <KeyboardRow rows={6}>
-                    <TouchableKeypadButton keyConfig={Keys.SIN} />
-                    <TouchableKeypadButton keyConfig={Keys.COS} />
-                    <TouchableKeypadButton keyConfig={Keys.TAN} />
-                    <TouchableKeypadButton keyConfig={Keys.CTG} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.SIN} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.COS} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.TAN} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.CTG} />
                     <div />
                     <div />
                 </KeyboardRow>
 
                 <KeyboardRow rows={6}>
-                    <TouchableKeypadButton keyConfig={Keys.LOG} />
-                    <TouchableKeypadButton keyConfig={Keys.LOG_N} />
-                    <TouchableKeypadButton keyConfig={Keys.LN} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.LOG} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.LOG_N} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.LN} />
                     <div />
                     <div />
-                    <TouchableKeypadButton keyConfig={Keys.BACKSPACE} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.BACKSPACE} />
                 </KeyboardRow>
 
                 <KeyboardRow rows={6}>
-                    <div />
-                    <div />
+                    <ManyKeypadButton keys={[Keys.LT, Keys.LEQ]} />
+                    <ManyKeypadButton keys={[Keys.GT, Keys.GEQ]} />
                     <div />
                     <div />
                     <div />

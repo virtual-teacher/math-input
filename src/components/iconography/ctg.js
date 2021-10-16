@@ -6,7 +6,7 @@
 const React = require("react");
 const PropTypes = require("prop-types");
 
-class Tan extends React.Component {
+class Ctg extends React.Component {
     static propTypes = {
         color: PropTypes.string.isRequired,
     };
@@ -15,7 +15,6 @@ class Tan extends React.Component {
         return (
             <svg width="48" height="48">
                 <g>
-                    <title>Layer 1</title>
                     <text
                         transform="matrix(0.519322 0 0 0.519322 3.7771 6.35419)"
                         stroke="#000"
@@ -36,4 +35,4 @@ class Tan extends React.Component {
     }
 }
 
-module.exports = Tan;
+module.exports = Ctg;

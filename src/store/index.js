@@ -272,7 +272,9 @@ const createStore = () => {
                 },
             },
             [],
-            [Keys.BACKSPACE, Keys.UP, Keys.RIGHT, Keys.DOWN, Keys.LEFT],
+            // multiPressableKeys is bugged - it raises Redux error
+            // [Keys.BACKSPACE, Keys.UP, Keys.RIGHT, Keys.DOWN, Keys.LEFT],
+            [],
         );
     };
 

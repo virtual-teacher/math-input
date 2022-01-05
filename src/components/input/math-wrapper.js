@@ -64,6 +64,16 @@ const KeyActions = {
     // The `FRAC_EXCLUSIVE` variant is handled manually, since we may need to do
     // some additional navigation depending on the cursor position.
     [Keys.FRAC_INCLUSIVE]: {str: "/", fn: CMD},
+    [Keys.TILDE]: {str: "\\sim", fn: WRITE},
+    [Keys.INFTY]: {str: "\\infty", fn: WRITE},
+    [Keys.SET_UNION]: {str: "\\cup", fn: WRITE},
+    [Keys.SET_INTERSECTION]: {str: "\\cap", fn: WRITE},
+    [Keys.SET_MINUS]: {str: "\\setminus", fn: WRITE},
+    [Keys.SET_EMPTY]: {str: "\\emptyset", fn: WRITE},
+    [Keys.SET_MEMBER]: {str: "\\in", fn: WRITE},
+    [Keys.SET_NOT_MEMBER]: {str: "\\notin", fn: WRITE},
+    [Keys.LOGIC_CONJUNCTION]: {str: "\\wedge", fn: WRITE},
+    [Keys.LOGIC_ALTERNATIVE]: {str: "\\vee", fn: WRITE},
 };
 
 const NormalCommands = {

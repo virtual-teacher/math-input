@@ -30,25 +30,25 @@ class SecondaryPage extends React.Component {
                     <TouchableKeypadButton keyConfig={KeyConfigs.COS} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.TAN} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.CTG} />
-                    <div />
-                    <div />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.TILDE} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.INFTY} />
                 </KeyboardRow>
 
                 <KeyboardRow rows={6}>
-                    <TouchableKeypadButton keyConfig={KeyConfigs.LOG} />
-                    <TouchableKeypadButton keyConfig={KeyConfigs.LOG_N} />
-                    <TouchableKeypadButton keyConfig={KeyConfigs.LN} />
-                    <div />
-                    <div />
+                    <ManyKeypadButton keys={[Keys.LOG_N, Keys.LOG, Keys.LN]} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.SET_INTERSECTION} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.SET_UNION} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.SET_MINUS} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.SET_EMPTY} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.BACKSPACE} />
                 </KeyboardRow>
 
                 <KeyboardRow rows={6}>
                     <ManyKeypadButton keys={[Keys.LT, Keys.LEQ]} />
                     <ManyKeypadButton keys={[Keys.GT, Keys.GEQ]} />
-                    <div />
-                    <div />
-                    <div />
+                    <ManyKeypadButton keys={[Keys.SET_MEMBER, Keys.SET_NOT_MEMBER]} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.LOGIC_CONJUNCTION} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.LOGIC_ALTERNATIVE} />
                     <TouchableKeypadButton keyConfig={dismissOrJumpOutKey} />
                 </KeyboardRow>
             </KeyboardWrapper>

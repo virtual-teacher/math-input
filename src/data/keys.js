@@ -74,6 +74,21 @@ const Keys = {
     // A custom key that captures an arbitrary number of symbols but has no
     // 'default' symbol or action.
     MANY: "MANY",
+
+    TILDE: "TILDE",
+    INFTY: "INFTY",
+
+    // sets
+    SET_UNION: "SET_UNION",
+    SET_INTERSECTION: "SET_INTERSECTION",
+    SET_MINUS: "SET_MINUS",
+    SET_EMPTY: "SET_EMPTY",
+    SET_MEMBER: "SET_MEMBER",
+    SET_NOT_MEMBER: "SET_NOT_MEMBER",
+
+    // logic
+    LOGIC_CONJUNCTION: "LOGIC_CONJUNCTION",
+    LOGIC_ALTERNATIVE: "LOGIC_ALTERNATIVE",
 };
 
 module.exports = Keys;

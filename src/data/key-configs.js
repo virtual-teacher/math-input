@@ -322,6 +322,86 @@ const KeyConfigs: Object = {
         // I18N: A label for a button that will dismiss/hide a keypad.
         ariaLabel: i18n._("Dismiss"),
     },
+    [Keys.TILDE]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Tilde"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\sim",
+        }
+    },
+    [Keys.INFTY]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Infinity"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\infty",
+        }
+    },
+    [Keys.SET_UNION]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Union"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\cup",
+        }
+    },
+    [Keys.SET_INTERSECTION]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Intersection"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\cap",
+        }
+    },
+    [Keys.SET_MINUS]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Minus"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\setminus",
+        }
+    },
+    [Keys.SET_EMPTY]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Empty set"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\emptyset",
+        }
+    },
+    [Keys.SET_MEMBER]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Set member"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\in",
+        }
+    },
+    [Keys.SET_NOT_MEMBER]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Set not member"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\notin",
+        }
+    },
+    [Keys.LOGIC_CONJUNCTION]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Conjunction"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\wedge",
+        }
+    },
+    [Keys.LOGIC_ALTERNATIVE]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("Alternative"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\vee",
+        }
+    }
 };
 
 // Add in any multi-function buttons. By default, these keys will mix in any

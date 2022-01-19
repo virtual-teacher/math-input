@@ -52,6 +52,7 @@ const KeyActions = {
     [Keys.ALPHA]: {str: "alpha", fn: CMD},
     [Keys.BETA]: {str: "beta", fn: CMD},
     [Keys.GAMMA]: {str: "gamma", fn: CMD},
+    [Keys.DELTA]: {str: "\\Delta", fn: CMD},
     [Keys.THETA]: {str: "theta", fn: CMD},
     [Keys.DEGREE]: {str: "\\degree", fn: WRITE},
     [Keys.RADICAL]: {str: "nthroot", fn: CMD},
@@ -74,16 +75,15 @@ const KeyActions = {
     [Keys.SET_NOT_MEMBER]: {str: "\\notin", fn: WRITE},
     [Keys.LOGIC_CONJUNCTION]: {str: "\\wedge", fn: WRITE},
     [Keys.LOGIC_ALTERNATIVE]: {str: "\\vee", fn: WRITE},
+    [Keys.LOG]: {str: "\\log", fn: WRITE},
+    [Keys.LN]: {str: "\\ln", fn: WRITE},
+    [Keys.SIN]: {str: "\\sin", fn: WRITE},
+    [Keys.COS]: {str: "\\cos", fn: WRITE},
+    [Keys.TAN]: {str: "\\tg", fn: WRITE},
+    [Keys.CTG]: {str: "\\ctg", fn: WRITE},
 };
 
-const NormalCommands = {
-    [Keys.LOG]: "log",
-    [Keys.LN]: "ln",
-    [Keys.SIN]: "sin",
-    [Keys.COS]: "cos",
-    [Keys.TAN]: "tan",
-    [Keys.CTG]: "ctg",
-};
+const NormalCommands = {};
 
 const ArithmeticOperators = ["+", "-", "\\cdot", "\\times", "\\div"];
 const EqualityOperators = ["=", "\\neq", "<", "\\leq", ">", "\\geq"];
@@ -211,9 +211,7 @@ class MathWrapper {
             const shouldNavigateLeft = cursor[this.MQ.L] === MQ_END;
             this.mathField.cmd("\\frac");
         } else if (key === Keys.LOG_N) {
-            this.mathField.write("log_{ }\\left(\\right)");
-            this.mathField.keystroke("Left"); // into parentheses
-            this.mathField.keystroke("Left"); // out of parentheses
+            this.mathField.write("log_{}");
             this.mathField.keystroke("Left"); // into index
         } else if (key === Keys.CUBE_ROOT) {
             this.mathField.write("\\sqrt[3]{}");
@@ -609,7 +607,14 @@ class MathWrapper {
         // a command being prefixed with a backslash leads to undesired
         // behavior. For example, Greek symbols, left parentheses, and square
         // roots all get treated as commands.
-        const validCommands = ["\\log", "\\ln", "\\cos", "\\sin", "\\tan", "\\ctg"];
+        const validCommands = [
+            "\\log",
+            "\\ln",
+            "\\cos",
+            "\\sin",
+            "\\tan",
+            "\\ctg",
+        ];
 
         let name = "";
         let startNode;

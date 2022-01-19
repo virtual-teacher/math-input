@@ -17,9 +17,8 @@ class SecondaryPage extends React.Component {
         return (
             <KeyboardWrapper>
                 <KeyboardRow rows={6}>
-                    <TouchableKeypadButton keyConfig={KeyConfigs.ALPHA} />
-                    <TouchableKeypadButton keyConfig={KeyConfigs.BETA} />
-                    <TouchableKeypadButton keyConfig={KeyConfigs.GAMMA} />
+                    <ManyKeypadButton keys={[Keys.ALPHA, Keys.BETA, Keys.GAMMA]} />
+                    <TouchableKeypadButton keyConfig={KeyConfigs.DELTA} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.ABS} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.PI} />
                     <TouchableKeypadButton keyConfig={KeyConfigs.DEGREE} />

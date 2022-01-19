@@ -24,7 +24,7 @@
     "aphrodite": "^1.1.0",
     "jquery": "2.1.1",
     "katex": "0.11.1",
-    "mathquill": "git+https://git@github.com/virtual-teacher/mathquill.git#78c5d92536e5b7da6773d14e5d0eed6f31067e58",
+    "mathquill": "git+https://git@github.com/virtual-teacher/mathquill.git#v1.1.1",
     "performance-now": "^0.2.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0"

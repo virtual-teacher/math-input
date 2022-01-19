@@ -50,6 +50,7 @@ const Keys = {
     ALPHA: "ALPHA",
     BETA: "BETA",
     GAMMA: "GAMMA",
+    DELTA: "DELTA",
     DEGREE: "DEGREE",
 
     UP: "UP",

@@ -245,6 +245,14 @@ const KeyConfigs: Object = {
             data: "\\gamma",
         },
     },
+    [Keys.DELTA]: {
+        type: KeyTypes.VALUE,
+        ariaLabel: i18n._("Delta"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\Delta",
+        },
+    },
     [Keys.DEGREE]: {
         type: KeyTypes.VALUE,
         ariaLabel: i18n._("Degree"),
@@ -401,7 +409,7 @@ const KeyConfigs: Object = {
             type: IconTypes.MATH,
             data: "\\vee",
         }
-    }
+    },
 };
 
 // Add in any multi-function buttons. By default, these keys will mix in any

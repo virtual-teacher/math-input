@@ -81,6 +81,8 @@ const KeyActions = {
     [Keys.COS]: {str: "\\cos", fn: WRITE},
     [Keys.TAN]: {str: "\\tg", fn: WRITE},
     [Keys.CTG]: {str: "\\ctg", fn: WRITE},
+    [Keys.L_ANGLE]: {str: "langle", fn: CMD},
+    [Keys.R_ANGLE]: {str: "rangle", fn: CMD},
 };
 
 const NormalCommands = {};

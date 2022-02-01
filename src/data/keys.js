@@ -40,6 +40,8 @@ const Keys = {
     COS: "COS",
     TAN: "TAN",
     CTG: "CTG",
+    L_ANGLE: "L_ANGLE",
+    R_ANGLE: "R_ANGLE",
 
     // TODO(charlie): Add in additional Greek letters.
     PI: "PI",

@@ -410,6 +410,22 @@ const KeyConfigs: Object = {
             data: "\\vee",
         }
     },
+    [Keys.L_ANGLE]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("LAngle"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\langle",
+        }
+    },
+    [Keys.R_ANGLE]: {
+        type: KeyTypes.OPERATOR,
+        ariaLabel: i18n._("RAngle"),
+        icon: {
+            type: IconTypes.MATH,
+            data: "\\rangle",
+        }
+    },
 };
 
 // Add in any multi-function buttons. By default, these keys will mix in any

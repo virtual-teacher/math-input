@@ -33,6 +33,7 @@ class App extends React.Component {
                     onFocus={() => this.state.keypadElement.activate()}
                     onBlur={() => this.state.keypadElement.dismiss()}
                 />
+                {this.state.value}
                 <Keypad
                     onElementMounted={(node) => {
                         if (node && !this.state.keypadElement) {

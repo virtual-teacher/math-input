@@ -47,7 +47,7 @@ const KeyActions = {
     [Keys.RIGHT_PAREN]: {str: ")", fn: CMD},
     [Keys.SQRT]: {str: "sqrt", fn: CMD},
     [Keys.PI]: {str: "pi", fn: CMD},
-    [Keys.ABS]: {str: "\\mid \\quad \\mid", fn: WRITE},
+    [Keys.ABS]: {str: "|", fn: WRITE},
     [Keys.ANGLE]: {str: "\\angle", fn: WRITE},
     [Keys.ALPHA]: {str: "alpha", fn: CMD},
     [Keys.BETA]: {str: "beta", fn: CMD},
